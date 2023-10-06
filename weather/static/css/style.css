@@ -1,0 +1,65 @@
+.context {
+    border-bottom: 2px solid black;    
+    text-align: center;
+    
+} 
+
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: bisque;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    /* background: rgb(220, 160, 160); */
+    /* background-image: url("photo/photo_1.jpg"); */
+    background: url("../main_photo.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.form-example{
+    padding-top: 50px;
+    font-size: 20px;
+}
+
+
+.container{
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.input_city{
+    color: rgb(51, 225, 167);
+}
+
+.item {
+    padding: 4px 2px 4px 2px;
+    /* font-size: 25px; */
+    /* border: 1px solid black; */
+    flex-basis: 20%;
+    border-radius: 5%;
+
+}
+
+.item2 {
+    color: red;
+    background-color: rgba(107, 148, 185, 0);
+
+
+}
+
+.text{
+    font-size: 18px;
+}
+
+.input_city {
+    font-size: 20px;
+}
+
+.find {
+    width: 30%;
+}

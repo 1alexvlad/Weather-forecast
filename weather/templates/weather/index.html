@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт о погоде</title>
+    <link href="static/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="context">
+            <h1>Сайт о погоде</h1>
+        </div>
+    </div>
+
+
+    <div class="main">
+        <div class="container">
+            <div class="item item_1">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="form-example">
+                        <label form="city" class="input_city"><b>Введите город</b></label>
+                        {{ form.name }}
+                        <!-- <input type="text" name="name" id="name" placeholder="Поиск"> -->
+                        <input type="submit" name="send" value="Найти">
+                    </div>
+                </form>
+            </div>
+            <div class="item item_2">
+                <h2>Информация</h2>
+
+                {% for info in all_info %}
+
+                <div class="text">
+                    <b>Город</b> {{ info.city }} <br>
+                    <b>Температура</b> {{ info.temp }} <sup>o</sup><br>
+                    <b>Давление</b> {{ info.pressure }} <br>
+                    <b>Ветер</b> {{ info.wind }} м/с<br>
+                    <img src="http://openweathermap.org/img/w/{{ info.icon }}.png" alt="Фото погоды" class="img-thumbnail"> 
+                </div>
+
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>
